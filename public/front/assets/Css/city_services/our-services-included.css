@@ -1,0 +1,51 @@
+.our-services-with-home-cleaning-services-section{
+    background-color: #0071BC0D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.city-services-page-our-services{
+  padding: 0px 65px;
+
+}
+.city-services-page-our-services h3{
+
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 45px;
+    margin-bottom: 20px;
+
+}
+.our-services-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 10%;
+  margin: 40px 0;
+  justify-content: space-around;
+  
+}
+
+.our-services-boxe {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+}
+
+.number-circle {
+  min-width: 50px;
+  min-height: 50px;
+  color: #fff;
+  background-color: #0071BC;
+  font-weight: bold;
+  border-radius: 50%;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  font-size: 35px;
+}

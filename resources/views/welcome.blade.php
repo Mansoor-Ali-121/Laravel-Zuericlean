@@ -1,367 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('webtemp')
+@include('links.css')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Züeri Clean</title>
+@section('title', 'Züeri Clean')
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/top_cleaning_services.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/common.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/sofa_cleaning_services.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/all_services.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/end_tenancy_cleaning.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/sofa_and_touch.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/terrace_cleaning.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/all-services-in-switzerland.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/lower_sofa_cleaning.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/operating_cities.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/why-choose.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/terrace_cleaner.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/customer_satisfaction.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/why_work_us.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/faqs.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front/assets/Css/footer.css') }}" />
-</head>
+@section('styles')
+    @yield('home-styles')
+@endsection
 
-<body>
-    <!-- Header Section -->
-    <div class="container header-section">
-        <div class="row">
-            <div class="col text-center mb-4">
-                <img src="{{ asset('front/assets/Images/logo.png') }}" alt="ZürClean Logo" class="img-fluid"
-                    style="max-height: 80px" />
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <!-- Phone -->
-            <div class="col-md-auto mb-3 d-flex align-items-center justify-content-center">
-                <div class="contact-info">
-                    <div class="contact-icon-container">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <span class="contact-text">+41 26 473 6082</span>
-                </div>
-            </div>
-            <!-- Email -->
-            <div class="col-md-auto mb-3 d-flex align-items-center justify-content-center">
-                <div class="contact-info">
-                    <div class="contact-icon-container">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <span class="contact-text">info@zuericlean.com</span>
-                </div>
-            </div>
-            <!-- Address -->
-            <div class="col-md-auto mb-3 d-flex align-items-center justify-content-center">
-                <div class="contact-info">
-                    <div class="contact-icon-container">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <span class="contact-text">Schaffhauserstrasse 380, 8050 Zürich</span>
-                </div>
-            </div>
-        </div>
-    </div>
+@section('main_section')
 
-    <!-- Navbar visible-->
-    <nav class="navbar navbar-expand-lg navbar-custom px-4 py-3">
-        <div class="container-fluid">
-            <!-- Mobile Top Bar (hamburger + logo + language) -->
-            <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
-                <!-- Hamburger -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: white">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Mobile Logo -->
-                <a class="navbar-brand mx-auto" href="#">
-                    <img src="./Images/white_logo.png" alt="Züri Clean" class="mobile-logo" style="height: 50px" />
-                </a>
-
-                <!-- Language Dropdown -->
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button"
-                        id="languageDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://flagcdn.com/ch.svg" alt="Swiss Flag" class="flag-icon me-2" />
-                        Ch
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownMobile">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/gb.svg" alt="English"
-                                    class="flag-icon me-2" />English</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/fr.svg" alt="French"
-                                    class="flag-icon me-2" />Français</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/de.svg" alt="German"
-                                    class="flag-icon me-2" />Deutsch</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Full Navbar Collapse Section -->
-            <div class="collapse navbar-collapse justify-content-between mt-2 mt-lg-0" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    <!-- Home (No Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="./index.html">Home</a>
-                    </li>
-
-                    <!-- About (Dropdown)  -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-light" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./about_us.html">About Us</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <!-- Sub Services -->
-                            <li><a class="dropdown-item" href="./about_us_storyline.html">Our Story Line</a></li>
-                            <li><a class="dropdown-item" href="./about_us_philosophy.html">Philiosophy</a></li>
-                            <li><a class="dropdown-item" href="./about_us_responsibility.html">Social
-                                    Responsibility</a></li>
-                            <li><a class="dropdown-item" href="./about_imprint.html">Imprint</a></li>
-                            <li><a class="dropdown-item" href="./about_us_our_team.html">Our Team</a></li>
-                        </ul>
-                    </li>
+    @include('partials.navone')
 
 
-                    <!-- Locations (Dropdown) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-light" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Locations
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Dubai</a></li>
-                            <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Cleaning Services (Dropdown) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-light" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Cleaning Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- All Services -->
-                            <li><a class="dropdown-item" href="./services.html">All Services</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <!-- Sub Services -->
-                            <li><a class="dropdown-item" href="#">Residential Cleaning</a></li>
-                            <li><a class="dropdown-item" href="#">Office Cleaning</a></li>
-                        </ul>
-                    </li>
-
-
-                    <!-- Cleaning Handover Guarantee (Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="./cleaning_handover.html">Cleaning Handover Guarantee</a>
-                    </li>
-
-                    <!-- Contact (Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="./contact.html">Contact Us</a>
-                    </li>
-
-                </ul>
-
-                <!-- Right Side: Language & Button (Desktop) -->
-                <div class="d-none d-lg-flex align-items-center gap-3 navbar-right">
-                    <!-- Language Dropdown -->
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button"
-                            id="languageDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://flagcdn.com/ch.svg" alt="Swiss Flag" class="flag-icon me-2" />
-                            Ch
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdownDesktop">
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/gb.svg" alt="English"
-                                        class="flag-icon me-2" />English</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/fr.svg" alt="French"
-                                        class="flag-icon me-2" />Français</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/de.svg" alt="German"
-                                        class="flag-icon me-2" />Deutsch</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Estimate Button -->
-                    <button class="btn btn-estimate px-3 py-2 rounded">
-                        Get a Free Estimate
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- White Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-white px-4 py-3 shadow-sm fixed-top white-navbar" id="navbar-white"
-        style="display: none;">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand white-navbar-logo" href="#">
-                <img src="./Images/logo.png" alt="Züri Clean" style="height: 50px" />
-            </a>
-            <!-- Mobile Header -->
-            <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
-                <!-- Hamburger -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarWhiteCollapse">
-                    <span class="navbar-toggler-icon-white"></span>
-                </button>
-
-                <!-- Mobile Logo -->
-                <a class="navbar-brand mx-auto" href="#">
-                    <img src="./Images/logo.png" alt="Züri Clean" style="height: 50px;" />
-                </a>
-
-                <!-- Language Dropdown -->
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle d-flex align-items-center" type="button"
-                        data-bs-toggle="dropdown">
-                        <img src="https://flagcdn.com/ch.svg" class="flag-icon me-2" /> Ch
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/gb.svg" class="flag-icon me-2" />English</a></li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/fr.svg" class="flag-icon me-2" />Français</a></li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                    src="https://flagcdn.com/de.svg" class="flag-icon me-2" />Deutsch</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Desktop Navbar -->
-            <div class="collapse navbar-collapse justify-content-between mt-2 mt-lg-0" id="navbarWhiteCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    <!-- Home (No Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="./index.html">Home</a>
-                    </li>
-
-                    <!-- About (Dropdown)  -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-dark" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./about_us.html">About Us</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <!-- Sub Services -->
-                            <li><a class="dropdown-item" href="./about_us_storyline.html">Our Story Line</a></li>
-                            <li><a class="dropdown-item" href="./about_us_philosophy.html">Philiosophy</a></li>
-                            <li><a class="dropdown-item" href="./about_us_responsibility.html">Social
-                                    Responsibility</a></li>
-                            <li><a class="dropdown-item" href="./about_imprint.html">Imprint</a></li>
-                            <li><a class="dropdown-item" href="./about_us_our_team.html">Our Team</a></li>
-                        </ul>
-                    </li>
-
-
-                    <!-- Locations (Dropdown) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-dark" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Locations
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Dubai</a></li>
-                            <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Cleaning Services (Dropdown) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle-white text-dark" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Cleaning Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- All Services -->
-                            <li><a class="dropdown-item" href="./services.html">All Services</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <!-- Sub Services -->
-                            <li><a class="dropdown-item" href="#">Residential Cleaning</a></li>
-                            <li><a class="dropdown-item" href="#">Office Cleaning</a></li>
-                        </ul>
-                    </li>
-
-
-                    <!-- Cleaning Handover Guarantee (Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="./cleaning_handover.html">Cleaning Handover Guarantee</a>
-                    </li>
-
-                    <!-- Contact (Dropdown) -->
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="./contact.html">Contact Us</a>
-                    </li>
-
-                </ul>
-
-
-                <!-- Right Section -->
-                <div class="d-none d-lg-flex align-items-center gap-3">
-                    <div class="dropdown">
-                        <button
-                            class="btn dropdown-toggle d-flex align-items-center white-language-icon  white-navbar-dropdown"
-                            type="button" data-bs-toggle="dropdown">
-                            <img src="https://flagcdn.com/ch.svg" class="flag-icon me-2" /> Ch
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/gb.svg" class="flag-icon me-2" />English</a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/fr.svg" class="flag-icon me-2" />Français</a></li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="https://flagcdn.com/de.svg" class="flag-icon me-2" />Deutsch</a></li>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="btn btn-white-estimate px-3 py-2">Get a Free Estimate</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+   {{-- @include('partials.commonNav') --}}
 
 
     <!-- Hero Section -->
@@ -1277,8 +928,7 @@
                         Do you provide a guarantee for move-out cleaning services?
                     </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         Yes! Our end-of-tenancy Cleaning ensures your space is ready for
                         inspection and meets all required standards.
@@ -1294,8 +944,7 @@
                         Are your cleaning services eco-friendly?
                     </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         Absolutely! We use eco-conscious cleaning products to prioritize
                         your health and the environment.
@@ -1307,8 +956,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                        aria-controls="flush-collapseThree">
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                         Can I schedule recurring cleaning appointments?
                     </button>
                 </h2>
@@ -1325,13 +973,11 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFour" aria-expanded="false"
-                        aria-controls="flush-collapseFour">
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                         How much does end of tenancy cleaning cost in Zürich?
                     </button>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         In Zurich, move-out cleaning typically range between CHF 430 and
                         CHF 1,550, depending on factors like property size, condition, and
@@ -1344,13 +990,11 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFive" aria-expanded="false"
-                        aria-controls="flush-collapseFive">
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                         What’s included in deep cleaning services?
                     </button>
                 </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         Deep cleaning covers areas not typically cleaned during regular
                         sessions, including behind furniture, appliances, and high-touch
@@ -1367,8 +1011,7 @@
                         How do I get a quote?
                     </button>
                 </h2>
-                <div id="flush-collapseSix" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         Contact us by phone or email to discuss your needs and receive a
                         tailored, no-obligation quote.
@@ -1380,8 +1023,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseSeven" aria-expanded="false"
-                        aria-controls="flush-collapseSeven">
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
                         What cleaning areas do you cover in Zürich?
                     </button>
                 </h2>
@@ -1397,162 +1039,132 @@
     </section>
 
     <!-- Blogs -->
-    <section class="blogs-section">
-        <h4>
-            Recent
-            <span class="txt-background-color"> Blogs </span>
-        </h4>
+    <div class="slide-container swiper">
+        <h3>Recent <span class="txt-background-color">Blogs</span></h3>
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
 
-        <div class="carousel-wrapper">
-            <button class="carousel-btn prev">&#10094;</button>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
 
-            <div class="carousel-container">
-                <div class="blog-card-container">
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog1.png') }}" alt="Blog 1" />
-                        <h4>
-                            Say Goodbye to Dust – and Hello to 20% Off! | ZueriClean...
-                        </h4>
-                        <p>
-                            Book expert cleaning services in Zurich, Zug & nearby areas with
-                            ZueriClean. End-of-tenancy, deep cleaning, carpet & office
-                            cleaning. Get 20% OFF today – no code needed!
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
                         </p>
-                    </div>
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog2.png') }}" alt="Blog 2" />
-                        <h4>Legal and Rental Agreement Considerations</h4>
-                        <p>
-                            Learn key legal and rental agreement tips in Switzerland,
-                            including tenant rights, cleaning obligations, and landlord
-                            protections. Stay informed and avoid disputes!
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog3.png') }}" alt="Blog 3" />
-                        <h4>Duration and Scheduling of Move-Out Cleaning</h4>
-                        <p>
-                            Learn how scheduling and duration impact move-out cleaning
-                            success. Ensure a stress-free handover and reclaim your deposit
-                            with these essential tips.
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog4.png') }}" alt="Blog 4" />
-                        <h4>Fast Apartment Cleaning: How Long It Truly Takes....</h4>
-                        <p>
-                            Worried about apartment clean time? Our fast guide helps! End of
-                            tenancy or just a refresh, know how long it takes. Zuericlean
-                            for easy booking & expert sofa cleaning.
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog3.png') }}" alt="Blog 3" />
-                        <h4>Duration and Scheduling of Move-Out Cleaning</h4>
-                        <p>
-                            Learn how scheduling and duration impact move-out cleaning
-                            success. Ensure a stress-free handover and reclaim your deposit
-                            with these essential tips.
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <img src="{{ asset('front/assets/Images/bloga images/blog3.png') }}" alt="Blog 3" />
-                        <h4>Duration and Scheduling of Move-Out Cleaning</h4>
-                        <p>
-                            Learn how scheduling and duration impact move-out cleaning
-                            success. Ensure a stress-free handover and reclaim your deposit
-                            with these essential tips.
-                        </p>
+                        <button class="btn-background-color">View More</button>
                     </div>
                 </div>
-            </div>
 
-            <button class="carousel-btn next">&#10095;</button>
-        </div>
-    </section>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
 
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button class="btn-background-color">View More</button>
 
-    <!-- Footer -->
-    <section class="footer-section">
-        <div class="footer-overlay"></div>
-
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="{{ asset('front/assets/Images/logo.png') }}" alt="ZueriClean Logo" class="footer-logo" />
-                <p>
-                    Keep yourself apart from the cleanup stress – As the best cleaning
-                    service Zürich, we’ll take care of all of your living space – Also
-                    consider us for move out cleaning with a trusted handover cleaning
-                    guarantee.
-                </p>
-            </div>
-
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Cleanings</h4>
-                    <ul>
-                        <li><a href="#">Residential Cleaning</a></li>
-                        <li><a href="#">Relocation, Move</a></li>
-                        <li><a href="#">Out and Handover Cleaning</a></li>
-                        <li><a href="#">Office Cleaning</a></li>
-                        <li><a href="#">Carpet Cleaning</a></li>
-                        <li><a href="#">Event Cleaning</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Locations</h4>
-                    <ul>
-                        <li><a href="#">Aarau</a></li>
-                        <li><a href="#">Baden</a></li>
-                        <li><a href="#">Basel</a></li>
-                        <li><a href="#">Bern</a></li>
-                        <li><a href="#">Biel Bienne</a></li>
-                        <li><a href="#">Dübendorf</a></li>
-                        <li><a href="#">See More</a></li>
-                    </ul>
+                    </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Important Links</h4>
-                    <ul>
-                        <li><a href="#">Tenancy Termination</a></li>
-                        <li><a href="#">Date Arranging</a></li>
-                        <li><a href="#">Packing Transport</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Our Clients</a></li>
-                    </ul>
+
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button class="btn-background-color">View More</button>
+
+                    </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li>+41764136183</li>
-                        <li>info@zuericlean.com</li>
-                        <li>Schaffhauserstrasse 380, 8050 Zürich</li>
-                        <li>A product of Specialclean Züri GmbH</li>
-                    </ul>
-                    <div class="footer-icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-linkedin-in"></i>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button class="btn-background-color">View More</button>
+
+                    </div>
+                </div>
+
+                <!-- new -->
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button class="btn-background-color">View More</button>
+
+                    </div>
+                </div>
+
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="overlay">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png"
+                                alt="Avatar" class="overlay-img" />
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef</h2>
+                        <p class="description">
+                            The lorem text the section that contains header with having open
+                            functionality. Lorem dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button class="btn-background-color">View More</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            © Copyright ZueriClean 2025 All Rights Reserved
-        </div>
-    </section>
-    <!-- Footer  end-->
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
-    <!-- Carousel  -->
-    <script src="{{ asset('front/assets/js/carousel.js') }}"></script>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+@endsection
