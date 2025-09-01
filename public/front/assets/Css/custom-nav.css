@@ -12,10 +12,12 @@
 .custom-white-navbar .custom-link {
   color: #000;
   font-weight: 500;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   position: relative;
   padding-bottom: 5px;
   text-decoration: none;
+  /* padding-left: 0px !important;*/
+  padding-right: 0px !important; 
 }
 
 .custom-white-navbar .custom-link:hover {
@@ -83,4 +85,13 @@
     /* font-weight: bold; */
     outline: #0071b8 solid 2px;
     
+}
+
+/* Dropdown open on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+.dropdown-menu {
+    transition: none !important;
 }

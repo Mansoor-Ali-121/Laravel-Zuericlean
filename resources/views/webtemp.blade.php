@@ -13,6 +13,8 @@
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+
     <link rel="stylesheet" href="{{ asset('front/assets/Css/common.css') }}" />
     <link rel="stylesheet" href="{{ asset('front/assets/Css/faqs.css') }}" />
     <link rel="stylesheet" href="{{ asset('front/assets/Css/footer.css') }}" />
@@ -119,30 +121,37 @@
 
 
     <!-- Carousel  -->
-    <script src="./js/carousel.js"></script>
+    {{-- <script src="./js/carousel.js"></script> --}}
 
-    <!-- navbar -->
-    <script>
-        window.addEventListener("scroll", function() {
-            const hero = document.querySelector(".hero-section");
-            const scrollMenu = document.getElementById("navbar-white");
+  <script>
+    window.addEventListener("scroll", function () {
+        const hero = document.querySelector(".hero-section");
+        const scrollMenu = document.getElementById("navbar-white");
 
-            if (window.scrollY > hero.offsetHeight) {
-                scrollMenu.style.display = "block";
-            } else {
-                scrollMenu.style.display = "none";
-            }
-        });
+        // Get hero's top position relative to the viewport
+        const heroTop = hero.getBoundingClientRect().top;
 
-        // Store cursor position on mousemove
-        // window.addEventListener("mousemove", function (event) {
-        //   window._cursorY = event.clientY + window.scrollY;
-        //   toggleNavbar();
-        // });
+        // Show white navbar when hero is entering the viewport (<= 0 means it's visible)
+        if (heroTop <= 0) {
+            scrollMenu.style.display = "block";
+        } else {
+            scrollMenu.style.display = "none";
+        }
+    });
 
-        // Initial check on page load
-        // toggleNavbar();
-    </script>
+    // Optional: Also run this logic on page load in case the page is already scrolled
+    window.addEventListener("load", function () {
+        const hero = document.querySelector(".hero-section");
+        const scrollMenu = document.getElementById("navbar-white");
+
+        if (hero.getBoundingClientRect().top <= 0) {
+            scrollMenu.style.display = "block";
+        } else {
+            scrollMenu.style.display = "none";
+        }
+    });
+</script>
+
 
     <!-- Swiper JS -->
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
@@ -191,7 +200,7 @@
     </script>
 
     <!-- <script src="./js/bookingpage/form.js"></script> -->
-    <!-- Flatpickr JS -->
+    <!-- Flatpickr date picker JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         flatpickr("#inline-calendar", {
@@ -200,6 +209,47 @@
             onChange: function(selectedDates, dateStr, instance) {
                 document.getElementById('selectedDate').textContent = dateStr || "--";
             }
+        });
+    </script>
+
+
+ <!-- carausal -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+    <!-- Blogs carausal -->
+    <script>
+        var swiper = new Swiper(".slide-content", {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 1000, // slide will change every 3 seconds
+                disableOnInteraction: false,
+            },
+            loop: true,
+            centerSlide: true,
+            fade: true,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+            },
         });
     </script>
 </body>

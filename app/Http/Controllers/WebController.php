@@ -84,4 +84,29 @@ class WebController extends Controller
         return view('booking');
     }
 
+    public function office_shop_cleaning()
+    {
+        return view('office_shop_cleaning');
+    }
+
+    public function blogs()
+    {
+        return view('blogs');
+    }
+
+    public function blogs_details()
+    {
+        return view('blogs_details');
+    }
+
+    public function city_services()
+    {
+        return view('city_services');
+    }
+
+    public function cleaning_services()
+    {
+        return view('cleaning_services');
+    }
+
 }

@@ -68,8 +68,8 @@ body {
 /* Navbar Styles */
 .navbar-custom {
   background-color: #0071b8;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   z-index: 1000;
 }
 

@@ -132,3 +132,65 @@
     <link rel="stylesheet" href="{{ asset('front/assets/Css/Booking_page/move-out-cleaning-section.css') }}">
     <link rel="stylesheet" href="{{ asset('front/assets/Css/Booking_page/professional-cleaning-services.css') }}">
 @endsection
+
+
+<!-- Office Shop Cleaning Page -->
+@section('office-shop-cleaning-styles')
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/office_shop_cleaning/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/office_shop_cleaning/office-main-section.css') }}">
+@endsection
+
+
+<!-- Blogs Page -->
+@section('blogs-styles')
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs_page/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs_page/latest-blogs.css') }}">
+@endsection
+
+
+<!-- Blogs details Page -->
+@section('blogs-details-styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs_details/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs_details/blogs-details.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs_details/services.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/blogs.css') }}" />
+@endsection
+
+
+<!-- Cleaning Services city vise  -->
+@section('city-services-styles')
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/popular-services.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/our-services-included.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/home-cleaning-services.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/why-choose.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/why-choose.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/near-by-cities.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/city_services/faqs.css') }}" />
+@endsection
+
+
+<!-- Cleaning Services page -->
+@section('cleaning-services-page-styles')
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/custom-nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/hero-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/operating-cities.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/why-choose.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/all-services-in-switzerland.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/popular-services.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/how-its-work.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/different-locations.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/reviews-section.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/Css/cleaning-services-page/faqs.css') }}">
+@endsection
